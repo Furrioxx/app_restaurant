@@ -19,6 +19,8 @@ class Dish {
   final String category;
   final double price;
 
+  String get displayPrice => "$price €";
+
   static List<Dish> initDishes() {
     return [
       // ---------- FORMULES ----------

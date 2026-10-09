@@ -82,12 +82,13 @@ class MenuPageState extends State<MenuPage>{
                               shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(15)
                               ),
+                              color: _selectedCategory == category ? Theme.of(context).colorScheme.inversePrimary : Colors.white,
                               child: Padding(
                                 padding: EdgeInsets.all(20),
                                 child: Text(category, style:
-                                TextStyle(
-                                    fontWeight: FontWeight.bold
-                                ),
+                                  TextStyle(
+                                      fontWeight: FontWeight.bold
+                                  ),
                                 ),
                               )
                           ),
@@ -117,9 +118,16 @@ class MenuPageState extends State<MenuPage>{
                                 crossAxisAlignment: .start,
                                 children: [
                                   Image.asset(dish.imagePath),
-                                  Text(dish.name),
+                                  SizedBox(height: 20),
+                                  Text(dish.name, style:
+                                    TextStyle(
+                                      fontWeight: FontWeight.bold
+                                    )
+                                  ),
+                                  SizedBox(height: 5),
                                   Text(dish.description),
-                                  Text(dish.price.toString())
+                                  SizedBox(height: 5),
+                                  Text(dish.displayPrice)
                                 ],
                               )
                           ),
