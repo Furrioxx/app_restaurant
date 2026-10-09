@@ -1,6 +1,4 @@
-import 'dart:ffi';
-
-import 'package:app_restaurant/main.dart';
+import 'package:app_restaurant/pages/menuPage.dart';
 
 class Dish {
   const Dish(

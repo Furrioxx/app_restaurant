@@ -21,7 +21,7 @@ class DishCard extends StatelessWidget {
             crossAxisAlignment: .start,
             children: [
               SizedBox(
-                height: 120,
+                height: 170,
                 width: double.infinity,
                 child: Image.asset(_dish.imagePath, fit: BoxFit.cover),
               ),
