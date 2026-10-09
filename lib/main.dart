@@ -1,3 +1,4 @@
+import 'package:app_restaurant/components/categoryCard.dart';
 import 'package:app_restaurant/components/dishCard.dart';
 import 'package:app_restaurant/models/dish.dart';
 import 'package:flutter/material.dart';
@@ -77,22 +78,7 @@ class MenuPageState extends State<MenuPage>{
                       for (final category in widget._categories)
                         GestureDetector(
                           onTap: () => switchCategory(category),
-                          child: Card(
-                              margin: EdgeInsets.all(10),
-                              elevation: 5,
-                              shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(15)
-                              ),
-                              color: _selectedCategory == category ? Theme.of(context).colorScheme.inversePrimary : Colors.white,
-                              child: Padding(
-                                padding: EdgeInsets.all(20),
-                                child: Text(category, style:
-                                  TextStyle(
-                                      fontWeight: FontWeight.bold
-                                  ),
-                                ),
-                              )
-                          ),
+                          child: CategoryCard(category: category, selectedCategory: _selectedCategory)
                         )
                     ],
                   ),

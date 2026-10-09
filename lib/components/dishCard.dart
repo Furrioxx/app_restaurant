@@ -2,9 +2,9 @@ import 'package:app_restaurant/models/dish.dart';
 import 'package:flutter/material.dart';
 
 class DishCard extends StatelessWidget {
-  const DishCard({super.key, required this.dish});
+  const DishCard({super.key, required this._dish});
 
-  final Dish dish;
+  final Dish _dish;
 
   @override
   Widget build(BuildContext context) {
@@ -23,10 +23,10 @@ class DishCard extends StatelessWidget {
               SizedBox(
                 height: 120,
                 width: double.infinity,
-                child: Image.asset(dish.imagePath, fit: BoxFit.cover),
+                child: Image.asset(_dish.imagePath, fit: BoxFit.cover),
               ),
               SizedBox(height: 20),
-              Text(dish.name, style:
+              Text(_dish.name, style:
               TextStyle(
                   fontWeight: FontWeight.bold
               )
@@ -34,13 +34,13 @@ class DishCard extends StatelessWidget {
               SizedBox(height: 5),
               Expanded(
                 child: Text(
-                  dish.description,
+                  _dish.description,
                   maxLines: 2,
                   overflow: TextOverflow.ellipsis,
                 ),
               ),
               SizedBox(height: 5),
-              Text(dish.displayPrice)
+              Text(_dish.displayPrice)
             ],
           )
       ),
