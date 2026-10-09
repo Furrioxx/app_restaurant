@@ -14,14 +14,15 @@ class Home extends StatelessWidget {
       theme: ThemeData(
         colorScheme: .fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const MenuPage(title: 'Menu du Restaurant Pizza'),
+      home: MenuPage(title: 'Menu du Restaurant Pizza'),
     );
   }
 }
 
 class MenuPage extends StatelessWidget {
-  const MenuPage({super.key, required this.title});
+  MenuPage({super.key, required this.title});
   final String title;
+  final List<String> _categories = ["Formules", "Entrées", "Plats", "Desserts", "Boissons"];
 
   @override
   Widget build(BuildContext context) {
@@ -36,11 +37,26 @@ class MenuPage extends StatelessWidget {
             mainAxisAlignment: .center,
             children: [
               SizedBox(
-                height: 200,
+                height: 76,
                 child: ListView(
                   scrollDirection: Axis.horizontal,
                   children: [
-                    // todo
+                    for (final category in _categories)
+                      Card(
+                        margin: EdgeInsets.all(10),
+                        elevation: 5,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(15)
+                        ),
+                        child: Padding(
+                          padding: EdgeInsets.all(20),
+                          child: Text(category, style:
+                            TextStyle(
+                                fontWeight: FontWeight.bold
+                            ),
+                          ),
+                        )
+                      )
                   ],
                 ),
               ),
