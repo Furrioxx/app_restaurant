@@ -58,8 +58,10 @@ class MenuPageState extends State<MenuPage>{
                     scrollDirection: Axis.horizontal,
                     children: [
                       for (final category in widget._categories)
+                        // ici on garde la Gesture dans la Page pour avoir la logique
                         GestureDetector(
                             onTap: () => switchCategory(category),
+                            // composant CategoryCard séparé pour plus de lisibilité et de séparation
                             child: CategoryCard(category: category, selectedCategory: _selectedCategory)
                         )
                     ],
@@ -70,6 +72,7 @@ class MenuPageState extends State<MenuPage>{
                 ),
                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: 10),
+                  // GridView pour un meilleur affichage sur les plus grand écran
                   child: GridView.builder(
                     shrinkWrap: true,
                     physics: NeverScrollableScrollPhysics(),
@@ -82,6 +85,7 @@ class MenuPageState extends State<MenuPage>{
                     itemCount: _visibleDishes.length,
                     itemBuilder: (context, index) {
                       final dish = _visibleDishes[index];
+                      // composant DishCard séparé pour plus de lisibilité et de séparation
                       return DishCard(dish: dish);
                     },
                   ),

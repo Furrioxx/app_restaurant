@@ -32,6 +32,8 @@ class DishCard extends StatelessWidget {
               )
               ),
               SizedBox(height: 5),
+              // permet de mettre du overflow si le texte est supérieur à 2 lignes
+              // pour garder la même taille de card pour tous les plats
               Expanded(
                 child: Text(
                   _dish.description,

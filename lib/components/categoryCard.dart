@@ -14,6 +14,7 @@ class CategoryCard extends StatelessWidget {
         shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(15)
         ),
+        // si la catégorie est celle sélectionnée, on l'affiche avec une couleur différente
         color: _selectedCategory == _category ? Theme.of(context).colorScheme.inversePrimary : Colors.white,
         child: Padding(
           padding: EdgeInsets.all(20),
