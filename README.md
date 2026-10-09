@@ -1,17 +1,23 @@
-# app_restaurant
+# App Restaurant
 
-A new Flutter project.
+Application de menu de restaurant réalisé en Flutter.
+Un seule page avec les différentes catégories (scroll horizontal) ainsi que les plats associés à ces catégories (scroll vertical)
 
-## Getting Started
+Utilisation de l'IA : 
+- génération de la liste mocké de plats
 
-This project is a starting point for a Flutter application.
+J'ai utilisé GridView à la place de Column pour une question d'estétique sur plus grand écran.
+J'avais à l'origine utilisé Column, mais je l'ai par la suite remplacé.
 
-A few resources to get you started if this is your first Flutter project:
+> Les captures d'écrans sont dans le dossier screenshots
+>
+> La vidéo se trouve dans le dossier video
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+Voici des visuels de l'application:
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![Screenshot 1](screenshots/Capture%20d’écran%20du%202026-10-09%2016-02-20.png)
+
+![Screenshot 3](screenshots/Image%20collée.png)
+
+![Screenshot 2](screenshots/Capture%20d’écran%20du%202026-10-09%2016-03-15.png)
+
